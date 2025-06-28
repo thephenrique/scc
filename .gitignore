@@ -1,3 +1,6 @@
 # Build.
-/build/
-/.cache/
+build/
+*.s
+
+# Test
+*_test

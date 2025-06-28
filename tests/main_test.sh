@@ -30,4 +30,6 @@ assert 1 257
 assert 255 -1
 assert 254 -2
 
+assert 20 '20-4+2-10+8+4'
+
 echo OK
