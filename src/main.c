@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,6 +15,11 @@ int main(int argc, char **argv) {
   printf("  mov $%ld, %%rax\n", strtol(input, &input, 10));
 
   while (*input) {
+    if (isspace(*input)) {
+      input++;
+      continue;
+    }
+
     if (*input == '+') {
       input++;
       printf("  add $%ld, %%rax\n", strtol(input, &input, 10));
