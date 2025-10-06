@@ -1,6 +1,6 @@
-CC=clang
+CC=cc
 CFLAGS=-std=c18
-CFLAGS+=-Wall
+CFLAGS+=-Wall -Wextra
 
 .PHONY: all test clean
 
