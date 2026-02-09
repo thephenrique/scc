@@ -1,0 +1,7 @@
+# Build.
+compile_commands.json
+build/
+.cache/
+
+# Test.
+*_temp_test*
