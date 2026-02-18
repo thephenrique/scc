@@ -1,12 +1,16 @@
 #!/bin/bash
 
+CC=gcc
+SCC=./build/scc
+OUTPUT_DIR=build/test
+
 assert_exit() {
   expected="$1"
   source="$2"
 
-  ./build/scc "$source" >main_asm_temp_test.s || exit
-  gcc -static -o main_temp_test main_asm_temp_test.s
-  ./main_temp_test
+  $SCC "$source" >$OUTPUT_DIR/main_test.s || exit
+  $CC $OUTPUT_DIR/main_test.s -o $OUTPUT_DIR/main_test
+  ./$OUTPUT_DIR/main_test
 
   actual="$?"
 

@@ -1,9 +1,12 @@
 WarningsAsErrors: "*"
 
+# Disable checks related to LLVM libc development.
+# Disable checks related to HLS/FPGA (Intel/Altera).
 Checks: >
   *,
 
   -llvmlibc-*,
+  -altera-*,
 
 CheckOptions:
   - { key: readability-function-cognitive-complexity.Threshold, value: 100 }
